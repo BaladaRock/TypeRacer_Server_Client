@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeRacer_Server", "TypeRacer_Server\TypeRacer_Server.csproj", "{BF2DC2C7-8768-415A-A765-03EC96DE7C7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User", "User\User.csproj", "{87778162-E8F6-4C01-8C79-A497A933FAAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BF2DC2C7-8768-415A-A765-03EC96DE7C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF2DC2C7-8768-415A-A765-03EC96DE7C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF2DC2C7-8768-415A-A765-03EC96DE7C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF2DC2C7-8768-415A-A765-03EC96DE7C7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87778162-E8F6-4C01-8C79-A497A933FAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87778162-E8F6-4C01-8C79-A497A933FAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87778162-E8F6-4C01-8C79-A497A933FAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87778162-E8F6-4C01-8C79-A497A933FAAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0A3D3869-880C-4BB7-82D0-345D0F0CAA2E}
+		SolutionGuid = {B9F1C20E-3A71-4BBA-8604-7F01AF41F8B8}
 	EndGlobalSection
 EndGlobal
