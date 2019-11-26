@@ -9,47 +9,27 @@ namespace User
 {
     public class User
     {
-        private bool initialized = false;
-        private static TcpClient client;
-        private static NetworkStream networkStream;
-        private static StreamReader streamReader;
-        private static StreamWriter streamWriter;
+        private bool initialized;
+        private TcpClient client;
+        private NetworkStream networkStream;
 
-        public static string Ip { get; set; }
-        public static int Port { get; set; }
+        public string Ip { get; set; }
+        public int Port { get; set; }
 
-        public void Init(string ip, int port)
+        public User()
         {
-            Ip = ip;
-            Port = port;
+            client = new TcpClient();
+        }
 
-            client = new TcpClient(new IPEndPoint(Dns.GetHostEntry("localHost").AddressList[0], Port));
+        public void Start()
+        {
+            Connect();
+        }
+
+        private void Connect()
+        {
+            client.Connect("127.0.0.1", 8000);
             networkStream = client.GetStream();
-            streamReader = new StreamReader(networkStream);
-            streamWriter = new StreamWriter(networkStream);
-
-            initialized = true;
-        }
-
-        public void Send(string data)
-        {
-            if (initialized)
-            {
-                streamWriter.WriteLine(data);
-                streamWriter.Flush();
-            }
-        }
-
-        public string Receive()
-        {
-            string msg = string.Empty;
-
-            if (initialized)
-            {
-                msg = streamReader.ReadLine();
-            }
-
-            return msg;
         }
     }
 }
