@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
@@ -9,16 +6,26 @@ namespace User
 {
     public class User
     {
-        private bool initialized;
-        private TcpClient client;
+        private readonly TcpClient client;
         private NetworkStream networkStream;
-
-        public string Ip { get; set; }
-        public int Port { get; set; }
 
         public User()
         {
             client = new TcpClient();
+        }
+
+        public string Ip { get; set; }
+        public int Port { get; set; }
+
+        public void ReceiveFromServer()
+        {
+            byte[] received = new byte[255];
+            networkStream.Read(received, 0, received.Length);
+
+            Console.WriteLine(Encoding.ASCII.GetString(received, 0, received.Length));
+
+            networkStream.Close();
+            client.Close();
         }
 
         public void Start()

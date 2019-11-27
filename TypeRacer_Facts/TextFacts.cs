@@ -1,4 +1,3 @@
-using System;
 using TypeRacer_Server;
 using Xunit;
 
