@@ -2,13 +2,12 @@
 
 namespace TypeRacer_Server
 {
-    public class Server
+    public class Program
     {
         public static void Main(string[] args)
         {
-
-
-            Console.Read();
+            var server = new MyServer();
+            server.Start();
         }
     }
 }
